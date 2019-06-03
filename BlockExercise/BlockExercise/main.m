@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Downloader.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Downloader *downloader = [[Downloader alloc] init];
+        [downloader downloadWithProcessBlock:^(CGFloat percent) {
+            NSLog(@"Downloading:%f", percent);
+        } completionBlock:^{
+            NSLog(@"Completed");
+        }];
+        return 0;
     }
-    return 0;
 }
