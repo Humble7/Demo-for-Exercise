@@ -6,6 +6,12 @@
 //  Copyright © 2019 ChenZhen. All rights reserved.
 //
 
+/**
+ 在Objective-C中如何声明Block，可以参考下面的链接：
+ http://fuckingblocksyntax.com
+ */
+
+
 #import <Foundation/Foundation.h>
 #import "Downloader.h"
 
